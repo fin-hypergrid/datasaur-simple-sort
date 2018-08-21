@@ -1,0 +1,23 @@
+{
+  "name": "datasaur-simple-sort",
+  "version": "3.0.0",
+  "description": "Simple single-column sorting Datasaur module",
+  "main": "index.js",
+  "scripts": {
+    "inject-version": "sed -i '' -E 's/ +\"?version\"?:.*/'\"`grep '  \"version\": \"[0-9]' package.json`/\" index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fin-hypergrid/datasaur-simple-sort.git"
+  },
+  "author": "Jonathan Eiten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fin-hypergrid/datasaur-simple-sort/issues"
+  },
+  "homepage": "https://github.com/fin-hypergrid/datasaur-simple-sort#readme",
+  "dependencies": {
+    "datasaur-base": "^3.0.0"
+  }
+}
