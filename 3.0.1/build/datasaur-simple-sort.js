@@ -1,3 +1,4 @@
+(function(require,module,exports){
 /* eslint-env commonjs */
 
 'use strict';
@@ -36,3 +37,7 @@ var DatasaurSimpleSort = DatasaurBase.extend('DatasaurSimpleSort', {
 DatasaurSimpleSort.version = '3.0.1';
 
 module.exports = DatasaurSimpleSort;
+})(fin.Hypergrid.require,fin.module={exports:{}},fin.module.exports);
+fin.Hypergrid.modules["datasaur-simple-sort"]=fin.module.exports;
+delete fin.module;
+
