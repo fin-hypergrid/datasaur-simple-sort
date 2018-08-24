@@ -12,6 +12,12 @@ var Sorter = require('datasaur-simple-sort'); // this version must be >= that of
 var dataModel = new Sorter(new Indexer(new Source));
 ```
 
+### Custom properties
+`datasaur-simple-sort` defines a single custom shared property.
+#### `version` _(static property)_
+The version string from package.json.
+(This is a static property of the constructor.)
+
 ### Custom methods
 `datasaur-simple-sort` defines a single custom instance method.
 #### `sort(columnIndex, options)` instance method
@@ -43,3 +49,22 @@ See [`datasaur-filter`](simple-sort) which does something like that,
 but forces [`Array.prototype.sort`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) to do a [stable sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)
 (which is is not naturally inclined to do), and properly handles computed cells and columns.
 _Note: As of this writing `datasaur-filter` has not yet been updated to v3.0.0._
+
+### Distribution
+Published as an npm module to npmjs.org to be npm installed:
+```bash
+npm install datasaur-simple-sort
+```
+Published as a _Hypergrid Client Module_ to be loaded by the client with a `<script>` tag:
+```html
+<script src="https://fin-hypergrid.github.io/datasaur-simple-sort/3.0.0/build/datasaur-simple-sort.js"></script>
+```
+The above `<script>` tag loads the module into `fin.Hypergrid.modules['datasaur-simple-sort']`.
+Once loaded it can be referenced from another Hypergrid client module with `require(...)`:
+```js
+var DatasaurSimpleSort = require('datasaur-simple-sort');
+```
+Or from some other script with `fin.Hypergrid.require(...)`:
+```js
+var DatasaurSimpleSort = fin.Hypergrid.require('datasaur-simple-sort');
+```
