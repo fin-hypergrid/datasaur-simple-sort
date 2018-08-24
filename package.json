@@ -1,6 +1,6 @@
 {
   "name": "datasaur-simple-sort",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Simple single-column sorting Datasaur module",
   "main": "index.js",
   "scripts": {

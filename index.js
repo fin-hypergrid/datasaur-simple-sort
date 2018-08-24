@@ -6,10 +6,8 @@ var DatasaurBase = require('datasaur-base');
 
 var DatasaurSimpleSort = DatasaurBase.extend('DatasaurSimpleSort', {
 
-    version: '3.0.0',
-
     sort: function(x, options) {
-        var source = this.next;
+        var source = this.next.next;
         var index = Array(source.getRowCount());
         for (var i = index.length; i--; ) index[i] = i;
 
@@ -28,5 +26,7 @@ var DatasaurSimpleSort = DatasaurBase.extend('DatasaurSimpleSort', {
     }
 
 });
+
+DatasaurSimpleSort.version = '3.0.1';
 
 module.exports = DatasaurSimpleSort;
