@@ -68,3 +68,9 @@ Or from some other script with `fin.Hypergrid.require(...)`:
 ```js
 var DatasaurSimpleSort = fin.Hypergrid.require('datasaur-simple-sort');
 ```
+
+### History
+* `3.0.1`
+   * Sort on the unsorted data rather than the sorted data.
+   * Delete the index when `option.dir` is falsy.
+* `3.0.0` — Initial commit.
